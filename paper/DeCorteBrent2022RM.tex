@@ -24,7 +24,7 @@
 %---------- Titel & auteur ----------------------------------------------------
 
 % TODO: (fase 2) geef werktitel van je eigen voorstel op
-\PaperTitle{machine learning applicatie voor de detectie  van slaap bruxisme}
+\PaperTitle{Machine learning applicatie voor de detectie  van slaapbruxisme}
 % Dit is typisch de opdracht en het vak waarvoor dit artikel geschreven is, bv.
 % ``Verslag onderzoeksproject Onderzoekstechnieken 2018-2019''
 \PaperType{Paper Research Methods: onderzoeksvoorstel}
@@ -46,8 +46,8 @@
 %---------- Abstract ----------------------------------------------------------
 
 \Abstract{% TODO: (fase 6)
-Dit onderzoek zal zich focussen op de creatie van een audiodetectiesysteem via een deep learning model, dat zal worden geïntegreerd in een mobiele applicatie, met als doelstelling het vaststellen van Bruxisme door het onderscheiden en vastleggen van het typisch knarsend geluid van tanden.
-Het model komt tot stand door de transformatie van audiofragmenten in spectrogrammen met extra tijd en maakt gebruik van een filter op basis van geluidsfrequenties, zodat het scenario in een beeldclassificatie kan omgezet worden . Van zodra het model ontwikkeld is, zal het worden geïmplementeerd in een mobiele applicatie welke gebaseerd op het Python framework Kivy .}
+Dit onderzoek zal zich focussen op de creatie van een audiodetectiesysteem via een deep learning model dat zal worden geïntegreerd in een mobiele applicatie, met als doelstelling het vaststellen van Bruxisme door het onderscheiden en vastleggen van het typisch knarsend geluid van tanden.
+Het model komt tot stand door de transformatie van audiofragmenten in spectrogrammen met extra tijd en maakt gebruik van een filter op basis van geluidsfrequenties waardoor het scenario in een beeldclassificatie kan omgezet worden . Van zodra het model ontwikkeld is, zal het worden geïmplementeerd in een mobiele applicatie welke gebaseerd is op het Python framework Kivy .}
 
 %---------- Onderzoeksdomein en sleutelwoorden --------------------------------
 % TODO: (fase 2) Vul de sleutelwoorden aan.
@@ -68,7 +68,7 @@ Het model komt tot stand door de transformatie van audiofragmenten in spectrogra
 %
 % De andere sleutelwoorden zijn vrij te kiezen.
 
-\Keywords{Machineleertechnieken en kunstmatige intelligentie; geluid detectie; Bruxisme}
+\Keywords{Machineleertechnieken en kunstmatige intelligentie; geluiddetectie; Bruxisme}
 \newcommand{\keywordname}{Sleutelwoorden} % Defines the keywords heading name
 
 %---------- Titel, inhoud -----------------------------------------------------
@@ -91,10 +91,12 @@ Het model komt tot stand door de transformatie van audiofragmenten in spectrogra
 \section{Inleiding}
 
 % TODO: (fase 2) introduceer je gekozen onderwerp, formuleer de onderzoeksvraag en deelvragen. Wat is de doelstelling (is die S.M.A.R.T.?), wat zal het resultaat zijn van het onderzoek (een Proof-of-Concept, een prototype, een advies, ...)? Waarom is het nuttig om dit onderwerp te onderzoeken?
-Slaapbruxisme (SB) is het onbewust over elkaar heen en weer  schuiven van de boven- en onderkaak, zodat de tanden een schurend en knarsend geluid voortbrengen. SB kan leiden tot heel wat complicaties waaronder hypertensie, disfunctie van het kaak- en tandstelsel, gebitsproblemen met o.a. het verlies van tandoppervlakte en gebarsten tanden, het slecht slapen en hoofdpijn . Deze gevolgen kunnen leiden tot een noemenswaardige daling van de levenskwaliteit.  Daarom is het essentieel om snel en gemakkelijk vast te kunnen stellen of  iemand  aan  SB lijdt .
+Slaapbruxisme (SB) is het onbewust over elkaar heen en weer  schuiven van de boven- en onderkaak, zodat de tanden een schurend en knarsend geluid voortbrengen. SB kan leiden tot heel wat complicaties waaronder hypertensie, disfunctie van het kaak- en tandstelsel, gebitsproblemen met o.a. het verlies van tandoppervlakte en gebarsten tanden, het slecht slapen en hoofdpijn. Deze gevolgen kunnen leiden tot een noemenswaardige daling van de levenskwaliteit.  Daarom is het essentieel om snel en gemakkelijk vast te kunnen stellen of  iemand  aan  SB lijdt .
 \bigbreak
+\noindent
 Er zijn enkele apparaten verkrijgbaar op de markt die  de mogelijkheid bieden om thuis SB vast te stellen, dit op basis van kaak- en spiermetingen of zenuwmetingen. Een voorbeeld hiervan is de BiteStrip \cite{Shochat_2007}.  Deze methode van detectie is adequaat, maar heeft tekortkomingen zoals de kost van de apparatuur en het limiteren van de slaap tijdens het detectieproces . 
 \bigbreak
+\noindent
 Omdat er tot op heden nog geen eenvoudig detectiesysteem bestaat dat prijsvriendelijk en betrouwbaar is en  dat het slaapproces niet hindert, zou het toepassen van Machine learning een gewenste oplossing bieden voor het tijdig vaststellen van SB.
 
 
@@ -112,8 +114,8 @@ Omdat er tot op heden nog geen eenvoudig detectiesysteem bestaat dat prijsvriend
 % \autocite{BIBTEXKEY} -> (Auteur, jaartal)
 % \textcite{BIBTEXKEY} -> Auteur (jaartal)
 %Voorbeeld van een referentie waar de auteursnaam geen onderdeel van de zin is~\autocite{Moore2002}.
-Vandaag bestaan er verschillende methodes om SB te ontdekken zoals deze op basis van een electromyograﬁe, waarbij elektrische signalen van de zenuwen worden omgezet in interpreteerbare data en het registreren van een toegenomen hartslag voordat een SB-aanval begint.  Zoals omschreven in  \cite{Deregibus_2013}.  Ook bestaat er een methode die zich baseert op het meten van kaak- en spierbewegingen vermeld in \cite{Shochat_2007}  .  Beide van deze methodes zijn gelimiteerd in hun manier van detecteren, omdat ze het slaapcomfort van de patiënt verminderen. 
-
+Vandaag bestaan er verschillende methodes om SB te ontdekken zoals deze op basis van een electromyograﬁe, waarbij elektrische signalen van de zenuwen worden omgezet in interpreteerbare data en het registreren van een toegenomen hartslag voordat een SB-aanval begint.  Dit staat omschreven in  \cite{Deregibus_2013}.  Ook bestaat er een methode die zich baseert op het meten van kaak- en spierbewegingen zoals vermeld in \cite{Shochat_2007}  .  Beide van deze methodes zijn gelimiteerd in hun manier van detecteren, omdat ze het slaapcomfort van de patiënt verminderen. \bigbreak
+\noindent
 Om de hoeveelheid opgenomen data te verhogen, zijn  er verschillende methodes, o.a. :
 
 
@@ -131,13 +133,14 @@ Om de hoeveelheid opgenomen data te verhogen, zijn  er verschillende methodes, o
 	\item toevoegen van "noise" \autocite{Wei_2020}
 	\bigbreak
 	\begin{itemize}
-		\item De toevoeging van Gauss-ruis met de hyperparameter die de amplitude regelt, laat de mogelijkheid om overﬁtting tegen te gaan. Het gebruik van Gauss-ruis is niet gelimiteerd tot de input maar kan ook toegevoegd worden aan de andere componenten zoals de activatiefunctie .
+		\item De toevoeging van Gauss-ruis met de hyperparameter die de amplitude regelt, laat de mogelijkheid om overfitting tegen te gaan. \newline Het gebruik van Gauss-ruis is niet gelimiteerd tot de input maar kan ook toegevoegd worden aan de andere componenten zoals de activatiefunctie.
 	\end{itemize}
 	\bigbreak
+	\break
 	\item pitch shift \autocite{Wei_2020}
 	\bigbreak 
 	\begin{itemize}
-		\item Het verhogen of verlagen van de halve toonafstanden, de kleinste stap omhoog of omlaag van een bestaande toon van het audiofragment.  Hetzelfde concept als het hierboven vermelde Time Stretching .
+		\item Het verhogen of verlagen van de halve toonafstanden, de kleinste stap omhoog of omlaag van een bestaande toon van het audiofragment.  Dit is hetzelfde concept als het hierboven vermelde Time Stretching.
 			
 	\end{itemize}
 	\bigbreak
@@ -145,7 +148,7 @@ Om de hoeveelheid opgenomen data te verhogen, zijn  er verschillende methodes, o
 	\item SpecAugment \autocite{Park_2019}
 	\bigbreak
 	\begin{itemize}
-		\item SpecAugment gebruikt 2 methodes om spectro- grammen uit te breiden.  Het verbergen van een bepaald bereik op de frequentieschaal, fre- quency masking genoemd, en het verbergen van een bereik op de tijdschaal, time masking genoemd.
+		\item SpecAugment gebruikt 2 methodes om spectro- grammen uit te breiden.  Het verbergen van een bepaald bereik op de frequentieschaal, frequency masking genoemd en het verbergen van een bereik op de tijdschaal, time masking genoemd.
 		Deze 2 methodes maken samen het uiteindelijke model  resistenter tegen het verlies van informatie. 
 		
 		
@@ -153,7 +156,8 @@ Om de hoeveelheid opgenomen data te verhogen, zijn  er verschillende methodes, o
 	\end{itemize}
 \end{itemize}
 \bigbreak
-Nog andere audiodetectiesystemen bestaan waaronder een  hoestdetector, omschreven in \cite{Kvapilova_2019}.  Hier wordt de  data opgesplitst in fragmenten van 1 seconde. Deze fragmenten worden omgezet in spectrogrammen door het ge- bruik van de Fourier-methode . Deze spectrogrammen  gebruikt men om een convolutioneel netwerk te trainen 
+\noindent
+Nog andere audiodetectiesystemen bestaan waaronder een  hoestdetector, omschreven in \cite{Kvapilova_2019}.  Hier wordt de  data opgesplitst in fragmenten van 1 seconde. Deze fragmenten worden omgezet in spectrogrammen door het gebruik van de Fourier-methode. Deze spectrogrammen  dienen om een convolutioneel netwerk te trainen.
 
 .
 
@@ -163,40 +167,43 @@ Nog andere audiodetectiesystemen bestaan waaronder een  hoestdetector, omschreve
 % TODO: (fase 5) beschrijf in detail in welke fasen je onderzoek uiteenvalt, hoe lang elke fase duurt en wat het concrete resultaat van elke fase is. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor experimenten, vragenlijsten, simulaties? Je beschrijft ook al welke tools je denkt hiervoor te gebruiken of te ontwikkelen.
 \subsection{Observatie}
 
-In het stadium van observatie zijn de noodzakelijke vereisten het verzamelen, verwerken en het labelen van de data. Het verzamelen van de data gebeurt tijdens verschillende sessies, door het opnemen van  klanken van personen met en zonder SB tijdens hun slaapproces.  Ook andere fragmenten zoals het kauwen worden opgenomen. Deze geluiden registreert men via smartphone om zo goed mogelijk de eigenlijke use case te vertegenwoordigen .
+In het stadium van observatie zijn de noodzakelijke vereisten het verzamelen, verwerken en het labelen van de data. Het verzamelen van de data gebeurt tijdens verschillende sessies, door het opnemen van  klanken van personen met en zonder SB tijdens hun slaapproces.  Ook andere fragmenten zoals het kauwen worden opgenomen. Deze geluiden registreert men via smartphone om zo goed mogelijk de eigenlijke use case te vertegenwoordigen.
 
 
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\linewidth]{brux_spec}
-    \caption{ spectrogram van tanden knarsen (duratie 3s mono)}
+    \caption{ spectrogram van tandenknarsen (duratie 3s mono)}
     \label{fig:mil spectrogram of teeth grinding (duration 3s)}
 \end{figure}
-
-De verzamelde data kan worden opgesplitst in kleinere fragmenten .
-Het aantal fragmenten kan vergroot worden met Time shifting en pitch shifting, waarbij rekening moet worden gehouden met de inputgrootte van het model . Het gebruik van Gauss-ruis kan ook worden gebruikt voor augmentatie van de bestaande fragmenten .
-
-
+\noindent
+De verzamelde data kan worden opgesplitst in kleinere fragmenten.
+Het aantal fragmenten kan vergroot worden met time stretching en pitch shifting, waarbij rekening moet worden gehouden met de inputgrootte van het model. Het gebruik van Gauss-ruis kan ook worden gebruikt voor augmentatie van de bestaande fragmenten.
 
 
-\bigbreak
-Wanneer de data is aangepast en verzameld kan ze worden omgezet in spectrogrammen, door het gebruik van time- en frequency masking . Deze methodes zorgen voor een tweeledig voordeel.  Het model is resistenter tegen ontbrekende data omdat het zich moet focussen op de meest essentiële features en met daarbij ook het voordeel van de extra uitbreiding van de hoeveelheid spectrogrammen. Wanneer de spectrogrammen  aangemaakt zijn worden ze gelabeld. De spectrogrammen geven de mogelijkheid om het als een image-classiﬁcatieprobleem op te lossen .
-
-\bigbreak
-Alle data zal worden opgeslaan met gebruik van MongoDb in de aangepaste vorm om de waarborg van privacy van de subjecten te garanderen .
-\bigbreak
-
-Nadat de data werd verwerkt en opgeslagen kan een werkend model worden opgebouwd, waar factoren zoals precisie en herinnering belangrijke componenten zijn om het juiste model te selecteren . Het werkend model zal worden geïmplementeerd in een mobiele applicatie als proof of concept . De grootste hoeveelheid van de beschikbare tijd zal worden gespendeerd aan data collectie en verwerking .
-
-
-\subsection{proof of concept}
-
-Het PoC zal opgebouwd worden en gebruik maken van het Python framework Kivy. Deze applicatie zal de mogelijkheid bieden om geluid op te nemen en de user op de hoogte brengen hoeveel SB- gebeurtenissen plaatsvonden de afgelopen nacht .
 
 
 \bigbreak
-Als samenvatting :  data wordt verzameld van SB- en niet SB-subjecten met een aantal soorten kauwgerelateerde geluiden . Die data wordt verwerkt en omgevormd tot spectrogrammen .  De spectrogrammen laten toe om een image- classiﬁcatiesysteem te maken. Het model wordt geïmplementeerd in een mobiele applicatie dat gebruik maakt van Kivy .
+\noindent
+Wanneer de data is aangepast en verzameld kan ze worden omgezet in spectrogrammen door het gebruik van time- en frequency masking. Deze methodes zorgen voor een tweeledig voordeel.  Het model is resistenter tegen ontbrekende data omdat het zich moet focussen op de meest essentiële features en heeft daarbij ook het voordeel van de extra uitbreiding van de hoeveelheid spectrogrammen. Wanneer de spectrogrammen  aangemaakt zijn worden ze gelabeld. De spectrogrammen geven de mogelijkheid om het als een image-classiﬁcatieprobleem op te lossen.
+
+\bigbreak
+\noindent
+Alle data zal worden opgeslagen gebruik makend van MongoDb in de aangepaste vorm om de waarborg van privacy van de subjecten te garanderen.
+\bigbreak
+\noindent
+Nadat de data werd verwerkt en bewaard kan een werkend model worden opgebouwd, waar factoren zoals precisie en herinnering belangrijke componenten zijn om het juiste model te selecteren . Het werkend model zal worden geïmplementeerd in een mobiele applicatie als proof of concept . De grootste hoeveelheid van de beschikbare tijd zal worden gespendeerd aan data collectie en verwerking.
+
+
+\subsection{Proof of concept}
+
+Het PoC zal opgebouwd worden en gebruik maken van het Python framework Kivy. Deze applicatie zal de mogelijkheid bieden om geluid op te nemen en de user op de hoogte brengen hoeveel SB- gebeurtenissen plaatsvonden de afgelopen nacht.
+
+
+\bigbreak
+\noindent
+Als samenvatting :  data wordt verzameld van SB- en niet SB-subjecten met een aantal soorten kauwgerelateerde geluiden. Die data wordt verwerkt en omgevormd tot spectrogrammen.  De spectrogrammen laten toe om een image- classiﬁcatiesysteem te maken. Het model wordt geïmplementeerd in een mobiele applicatie dat gebruik maakt van Kivy.
 
 
 
@@ -207,9 +214,11 @@ Als samenvatting :  data wordt verzameld van SB- en niet SB-subjecten met een aa
 
 % TODO: (fase 6) beschrijf wat je verwacht uit je onderzoek en waarom (bv. volgens je literatuuronderzoek is softwarepakket A het meest gebruikte en denk je dat het voor deze casus ook het meest geschikt zal zijn). Natuurlijk kan je niet in de toekomst kijken en mag je geen alternatieve mogelijkheden uitsluiten. In de praktijk gebeurt het ook vaak dat een onderzoek tot verrassende resultaten leidt, dat maakt het proces nog interessanter!
 
-De creatie van een model dat hoogst waarschijnlijk gebaseerd is op een convolutioneel netwerk dat SB gebeurtenissen kan ontdekken en de duur meten door het ontdekken van het knarsen van tanden, dat een symptoom is van SB .
+Het ontstaan van een gebruiksvriendelijk en voor iedereen toegankelijke applicatie met een convolutioneel model dat SB-gebeurtenissen detecteert en de duur/ernst ervan opmeet. Met deze App kan vroegtijdig actie ondernomen worden om schade aan de gezondheid te voorkomen.
+\noindent
+De PoC mobiele applicatie zal gebouwd worden met het Python framework Kivy. 
 
-Het model wordt gebruikt in een POC mobiele applicatie dat hoogst waarschijnlijk op basis van Kivy werkt .
+
 
 
 
